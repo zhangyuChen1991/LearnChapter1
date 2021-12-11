@@ -105,6 +105,8 @@ class MainActivity : AppCompatActivity() {
         ThreadPoolManager.getInstance().execute {
 
         }
+
+        ProduceCupProxy().p()
     }
 
     private fun addFragment() {
