@@ -1,0 +1,14 @@
+include ':route_lib'
+include ':module1'
+include ':route_processor'
+include ':route'
+include ':app'
+include ':learn_flutter'
+project(':learn_flutter').projectDir = new File('../learn_flutter')
+rootProject.name = "LearnARouter"
+
+setBinding(new Binding([gradle: this]))                                // new
+evaluate(new File(                                                     // new
+        settingsDir.parentFile,                                              // new
+        'learn_flutter/.android/include_flutter.groovy'                         // new
+))
