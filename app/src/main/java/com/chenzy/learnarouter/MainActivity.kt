@@ -1,6 +1,7 @@
 package com.chenzy.learnarouter
 
 import android.animation.ObjectAnimator
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
@@ -10,6 +11,7 @@ import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import com.chenzy.learnarouter.constant.Constants
 import com.chenzy.learnarouter.manager.ThreadPoolManager
+import com.chenzy.learnarouter.mvvm.DataActivity
 import com.chenzy.route.Route
 import io.flutter.embedding.android.FlutterActivity
 import kotlinx.coroutines.*
@@ -95,13 +97,14 @@ class MainActivity : AppCompatActivity() {
         addFragment()
 
         //跳到flutter页面去
-        startActivity(
-            FlutterActivity
-                .withNewEngine()
-                .initialRoute("/demo2")//指定页面
-                .build(this)
-        )
+//        startActivity(
+//            FlutterActivity
+//                .withNewEngine()
+//                .initialRoute("/demo2")//指定页面
+//                .build(this)
+//        )
 
+        startActivity(Intent(this, DataActivity::class.java))
         ThreadPoolManager.getInstance().execute {
 
         }

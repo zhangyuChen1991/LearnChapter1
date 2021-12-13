@@ -14,4 +14,16 @@ class DemoViewModel : ViewModel() {
         }
         return data!!
     }
+
+    fun getDemoData(){
+        if (data == null) {
+            data = MutableLiveData<DemoData>();
+        }
+
+        var realData = DemoData()
+        realData.name = "张三"
+        realData.age = "40"
+
+        data!!.value = realData
+    }
 }
