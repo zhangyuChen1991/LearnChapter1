@@ -104,12 +104,12 @@ class MainActivity : AppCompatActivity() {
 //                .build(this)
 //        )
 
-        startActivity(Intent(this, DataActivity::class.java))
+        startActivity(Intent(this, BoringActivity::class.java))
         ThreadPoolManager.getInstance().execute {
 
         }
 
-        ProduceCupProxy().p()
+//        ProduceCupProxy().p()
     }
 
     private fun addFragment() {
